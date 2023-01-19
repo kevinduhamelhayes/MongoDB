@@ -1,0 +1,20 @@
+use("platzi_store")
+
+//using $eq (busqueda implicita)
+//db.inventory.find({ qty: 20 })
+
+//busqueda explicita
+//db.inventory.find({ qty: { $eq: 20 } })
+
+
+//busqueda por subdocumentos
+//db.inventory.find({ "item.name" : "ab" })
+
+db.inventory.find({ "item.code" : "123" })
+
+
+//palabra.item  genera una direccion es decir dentro del item buscara el code
+//dentro del item buscara el name es como el asignador de css
+
+//using $ne (no equal no igual a 20)
+db.inventory.find({ qty: { $ne: 20 } })
