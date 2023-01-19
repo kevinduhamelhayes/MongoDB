@@ -1,0 +1,8 @@
+use("platzi_store")
+
+//en la expresion refular la i colocada significa quitar el sensitive case
+//db.inventory.find({"item.description": {$regex: /line}}) //busqueda normal
+//db.inventory.find({"item.description": {$regex: /line/i}}) //busqueda no sensitiva
+//db.inventory.find({"item.description": {$regex: /line$/i}}) //busqueda no sensitiva terminada en line
+//db.inventory.find({"item.description": {$regex: /^single/i}}) //busqueda no sensitiva con line al inicio
+//db.inventory.find({"item.description": {$regex: /^s/im}}) // buscara todos los elementos que inicien con s de forma no sensitiva y multiline
